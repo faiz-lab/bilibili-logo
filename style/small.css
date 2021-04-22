@@ -53,3 +53,25 @@
     background: rgb(255,255,255);
     border-radius: 10%;
 }
+
+.left-line {
+    width: 50px;
+    height: 12px;
+    border-radius: 12px;
+    background: rgb(1, 177, 253);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -15px;
+    left: 44px;
+}
+
+.right-line {
+    width: 50px;
+    height: 12px;
+    border-radius: 12px;
+    background: rgb(1, 177, 253);
+    transform: rotate(135deg);
+    position: absolute;
+    top: -15px;
+    right: 44px;
+}
