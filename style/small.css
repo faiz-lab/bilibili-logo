@@ -75,3 +75,24 @@
     top: -15px;
     right: 44px;
 }
+
+
+.left-eye {
+    width: 40px;
+    height: 16px;
+    background: rgb(1, 177, 253);
+    transform: rotate(-15deg);
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+
+.right-eye {
+    width: 40px;
+    height: 16px;
+    background: rgb(1, 177, 253);
+    transform: rotate(15deg);
+    position: absolute;
+    top: 50px;
+    right: 40px;
+}
