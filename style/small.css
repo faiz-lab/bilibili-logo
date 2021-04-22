@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    margin: 0 auto;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-face {
+    width: 200px;
+    height: 150px;
+    background: lightcoral;
+    border-radius: 10%;
+}

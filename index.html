@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>B站小电视</title>
+    <link rel="shortcut icon" href="./assets/bilibili.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style/small.css" media="(min-device-width:300px) and (max-device-width:800px)">
+    <link rel="stylesheet" href="./style/big.css" media="(min-device-width:1000px)">
+</head>
+
+<body>
+    <div class="box">
+        <div class="logo">
+            <div class="logo-face"></div>
+            <div class="left-line"></div>
+            <div class="right-line"></div>
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="left-nose"></div>
+            <div class="right-nose"></div>
+        </div>
+    </div>
+    <script>
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // We listen to the resize event
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+    </script>
+</body>
+
+</html>

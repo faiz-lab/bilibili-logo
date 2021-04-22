@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    display: flex;
+    width: 60%;
+    height: 70vh;
+    height: calc(var(--vh, 1vh) * 70);
+    margin: 15vh auto;
+    background: lightblue;
+}
+
+.logo-face {
+    flex: 1;
+    width: 25%;
+    height: 25%;
+    background: lightcoral;
+}
