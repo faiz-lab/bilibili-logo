@@ -84,6 +84,7 @@
     position: absolute;
     top: 50px;
     left: 40px;
+    transition: transform 0.2s ease-in;
 }
 
 .right-eye {
@@ -94,6 +95,16 @@
     position: absolute;
     top: 50px;
     right: 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.eye:hover .left-eye {
+    transform: rotate(15deg);
+
+}
+.eye:hover .right-eye {
+    transform: rotate(-15deg);
+
 }
 
 .left-nose {
