@@ -84,7 +84,7 @@
     position: absolute;
     top: 50px;
     left: 40px;
-    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease-out;
 }
 
 .right-eye {
@@ -95,7 +95,7 @@
     position: absolute;
     top: 50px;
     right: 40px;
-    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease-out;
 }
 
 .eye:hover .left-eye {
