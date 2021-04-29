@@ -128,11 +128,13 @@ const style_sheets = `<style>
 </style>`
 
 let n = 1
+let intervalId = null
+let period = 25
 
 const handler = () => {
     n += 1
     if (n > style_sheets.length) {
-        window.clearInterval(id)
+        clearInterval(intervalId)
         return
     }
     code.textContent = style_sheets.substr(7, n - 15)
@@ -141,4 +143,37 @@ const handler = () => {
     hljs.highlightAll()
 }
 
-const id = setInterval(handler, 10)
+function play() {
+    if (!intervalId) {
+        intervalId = setInterval(handler, period)
+    }
+}
+
+function pause() {
+    clearInterval(intervalId)
+    intervalId = null
+}
+
+function highSpeed() {
+    pause()
+    period = 5
+    intervalId = setInterval(handler, period)
+}
+
+function lowSpeed() {
+    pause()
+    period = 50
+    intervalId = setInterval(handler, period)
+}
+
+function intermediateSpeed() {
+    pause()
+    period = 25
+    intervalId = setInterval(handler, period)
+}
+
+btn_play.addEventListener('click', play)
+btn_pause.addEventListener('click', pause)
+btn_fast.addEventListener('click', highSpeed)
+btn_slow.addEventListener('click', lowSpeed)
+btn_intermediate.addEventListener('click', intermediateSpeed)
