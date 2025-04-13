@@ -5,6 +5,7 @@
 
 .container {
     display: flex;
+    font-family: 'Yu Gothic', 'Meiryo', sans-serif;
 }
 
 .codeblock::-webkit-scrollbar {
