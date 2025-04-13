@@ -140,8 +140,8 @@ const handler = () => {
         clearInterval(intervalId)
         return
     }
-    code.textContent = style_sheets.substring(7, n - 15)
-    demo.innerHTML = style_sheets.substring(0, n)
+    code.textContent = style_sheets.slice(7, n - 15)
+    demo.innerHTML = style_sheets.slice(0, n)
     codeblock.scrollTop = codeblock.scrollHeight
     hljs.highlightAll()
 }
