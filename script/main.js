@@ -87,6 +87,7 @@ const style_sheets = `<style>
     transform: rotate(15deg);
 
 }
+
 .eye:hover .right-eye {
     transform: rotate(-15deg);
 
@@ -125,13 +126,14 @@ const style_sheets = `<style>
     position: absolute;
     bottom: 57px;
 }
+
 かわいいミニテレビができたよ！
 ヒント：おめめが動くよ〜！😊
 </style>`
 
 let n = 1
 let intervalId = null
-let period = 25
+let period = 10
 
 const handler = () => {
     n += 1
@@ -140,7 +142,7 @@ const handler = () => {
         clearInterval(intervalId)
         return
     }
-    code.textContent = style_sheets.slice(7, n - 15)
+    code.textContent = style_sheets.slice(7, n - 7)
     demo.innerHTML = style_sheets.slice(0, n)
     codeblock.scrollTop = codeblock.scrollHeight
     hljs.highlightAll()
