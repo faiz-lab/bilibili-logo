@@ -172,13 +172,13 @@ function highSpeed() {
 
 function lowSpeed() {
     pause()
-    period = 50
+    period = 20
     intervalId = setInterval(handler, period)
 }
 
 function intermediateSpeed() {
     pause()
-    period = 25
+    period = 10
     intervalId = setInterval(handler, period)
 }
 
