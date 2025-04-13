@@ -134,6 +134,7 @@ const style_sheets = `<style>
 let n = 1
 let intervalId = null
 let period = 10
+const codetext = style_sheets.substring(7, style_sheets.length - 8)
 
 const handler = () => {
     n += 1
@@ -142,7 +143,7 @@ const handler = () => {
         clearInterval(intervalId)
         return
     }
-    code.textContent = style_sheets.slice(7, n - 7)
+    code.textContent = codetext.substring(0, n)
     demo.innerHTML = style_sheets.slice(0, n)
     codeblock.scrollTop = codeblock.scrollHeight
     hljs.highlightAll()
@@ -168,7 +169,7 @@ function pause() {
 
 function highSpeed() {
     pause()
-    period = 5
+    period = 1
     intervalId = setInterval(handler, period)
 }
 
