@@ -125,8 +125,8 @@ const style_sheets = `<style>
     position: absolute;
     bottom: 57px;
 }
-好了，一只可爱的小电视已经画出来了，
-提示一下，眼睛会动哦！😊
+かわいいミニテレビができたよ！
+ヒント：おめめが動くよ〜！😊
 </style>`
 
 let n = 1
@@ -136,7 +136,7 @@ let period = 25
 const handler = () => {
     n += 1
     if (n > style_sheets.length) {
-        btn_play.textContent = '重新播放'
+        btn_play.textContent = 'リプレイ'
         clearInterval(intervalId)
         return
     }
@@ -154,7 +154,7 @@ function play() {
         n = 1
         code.textContent = ''
         demo.innerHTML = ''
-        btn_play.textContent = '播放'
+        btn_play.textContent = '再生'
         intermediateSpeed()
     }
 }
